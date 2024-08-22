@@ -539,7 +539,7 @@ export default function Lookup({ data, target }: Props) {
           >
             BunDragon
           </Link>
-          <Badge variant={`outline`} href="https://status.setbun.com/">Uptime</Badge>
+          <Badge variant={`outline`}>All service are online.</Badge>
         </div>
       </main>
     </ScrollArea>
