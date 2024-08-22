@@ -497,7 +497,7 @@ export default function Lookup({ data, target }: Props) {
           <div className={"relative flex flex-row items-center w-full mt-2"}>
             <Input
               className={`w-full text-center`}
-              placeholder={`域名或IP (e.g. google.com, 8.8.8.8)`}
+              placeholder={`输入域名或IP (e.g. google.com, 8.8.8.8)`}
               value={inputDomain}
               onChange={(e) => setInputDomain(e.target.value)}
               onKeyDown={(e) => {
