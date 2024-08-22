@@ -300,7 +300,7 @@ function ResultTable({ result, target }: ResultTableProps) {
             }
           />
           <Row
-            name={`注册过节`}
+            name={`注册国家`}
             value={result.registrantCountry}
             hidden={
               !result.registrantCountry ||
@@ -341,7 +341,7 @@ function ResultTable({ result, target }: ResultTableProps) {
             }
             hidden={result.nameServers.length === 0}
           />
-          <Row name={`DNSSEC`} value={result.dnssec} hidden={!result.dnssec}>
+          <Row name={`DNS安全扩展`} value={result.dnssec} hidden={!result.dnssec}>
             <Icon
               className={`inline w-3.5 h-3.5 ml-1.5`}
               icon={getDnssecIcon(result.dnssec)}
