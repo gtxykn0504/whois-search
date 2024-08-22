@@ -186,15 +186,15 @@ function ResultTable({ result, target }: ResultTableProps) {
     result && (
       <table className={`w-full text-sm mb-4 whitespace-pre-wrap`}>
         <tbody>
-          <Row name={`Name`} value={result.domain || target.toUpperCase()} />
-          <Row name={`Status`} value={<StatusComp />} />
+          <Row name={`域名/IP`} value={result.domain || target.toUpperCase()} />
+          <Row name={`状态`} value={<StatusComp />} />
           <Row
-            name={`Registrar`}
+            name={`注册商`}
             value={result.registrar}
             hidden={!result.registrar || result.registrar === "Unknown"}
           />
           <Row
-            name={`Registrar URL`}
+            name={`注册商网址`}
             value={result.registrarURL}
             likeLink
             hidden={!result.registrarURL || result.registrarURL === "Unknown"}
@@ -222,12 +222,12 @@ function ResultTable({ result, target }: ResultTableProps) {
             hidden={!result.cidr || result.cidr === "Unknown"}
           />
           <Row
-            name={`Net Type`}
+            name={`网络类型`}
             value={result.netType}
             hidden={!result.netType || result.netType === "Unknown"}
           />
           <Row
-            name={`Net Name`}
+            name={`网络名称`}
             value={result.netName}
             hidden={!result.netName || result.netName === "Unknown"}
           />
@@ -254,28 +254,28 @@ function ResultTable({ result, target }: ResultTableProps) {
           {/* IP Whois Only End */}
 
           <Row
-            name={`Whois Server`}
+            name={`Whois 服务器`}
             value={result.whoisServer}
             likeLink
             hidden={!result.whoisServer || result.whoisServer === "Unknown"}
           />
 
           <Row
-            name={`Creation Date`}
+            name={`创建时间`}
             value={toReadableISODate(result.creationDate)}
             hidden={!result.creationDate || result.creationDate === "Unknown"}
           >
             <InfoText content={`UTC`} />
           </Row>
           <Row
-            name={`Updated Date`}
+            name={`更新时间`}
             value={toReadableISODate(result.updatedDate)}
             hidden={!result.updatedDate || result.updatedDate === "Unknown"}
           >
             <InfoText content={`UTC`} />
           </Row>
           <Row
-            name={`Expiration Date`}
+            name={`截止时间`}
             value={toReadableISODate(result.expirationDate)}
             hidden={
               !result.expirationDate || result.expirationDate === "Unknown"
@@ -284,7 +284,7 @@ function ResultTable({ result, target }: ResultTableProps) {
             <InfoText content={`UTC`} />
           </Row>
           <Row
-            name={`Registrant Organization`}
+            name={`注册组织`}
             value={result.registrantOrganization}
             hidden={
               !result.registrantOrganization ||
@@ -292,7 +292,7 @@ function ResultTable({ result, target }: ResultTableProps) {
             }
           />
           <Row
-            name={`Registrant Province`}
+            name={`注册地`}
             value={result.registrantProvince}
             hidden={
               !result.registrantProvince ||
@@ -300,7 +300,7 @@ function ResultTable({ result, target }: ResultTableProps) {
             }
           />
           <Row
-            name={`Registrant Country`}
+            name={`注册过节`}
             value={result.registrantCountry}
             hidden={
               !result.registrantCountry ||
@@ -308,7 +308,7 @@ function ResultTable({ result, target }: ResultTableProps) {
             }
           />
           <Row
-            name={`Registrant Phone`}
+            name={`注册电话`}
             value={result.registrantPhone}
             hidden={
               !result.registrantPhone || result.registrantPhone === "Unknown"
@@ -317,14 +317,14 @@ function ResultTable({ result, target }: ResultTableProps) {
             <InfoText content={`Abuse`} />
           </Row>
           <Row
-            name={`Registrant Email`}
+            name={`注册邮件`}
             value={result.registrantEmail}
             hidden={
               !result.registrantEmail || result.registrantEmail === "Unknown"
             }
           />
           <Row
-            name={`Name Servers`}
+            name={`DNS名称服务器`}
             value={
               <div className={`flex flex-col`}>
                 {result.nameServers.map((ns, index) => (
@@ -378,7 +378,7 @@ const ResultComp = React.forwardRef<HTMLDivElement, Props>(
             <CardTitle
               className={`flex flex-row items-center text-lg md:text-xl`}
             >
-              Result
+              查询结果
               {!isCapture && (
                 <Drawer>
                   <DrawerTrigger asChild>
@@ -392,7 +392,7 @@ const ResultComp = React.forwardRef<HTMLDivElement, Props>(
                   </DrawerTrigger>
                   <DrawerContent>
                     <DrawerHeader>
-                      <DrawerTitle>Result Capture</DrawerTitle>
+                      <DrawerTitle>结果截图</DrawerTitle>
                       <DrawerClose />
                     </DrawerHeader>
                     <div className={`my-2`}>
@@ -410,7 +410,7 @@ const ResultComp = React.forwardRef<HTMLDivElement, Props>(
                         className={`flex flex-row items-center w-full max-w-[768px] mx-auto`}
                       >
                         <Camera className={`w-4 h-4 mr-2`} />
-                        Capture
+                        截取
                       </Button>
                     </DrawerFooter>
                   </DrawerContent>
@@ -429,7 +429,7 @@ const ResultComp = React.forwardRef<HTMLDivElement, Props>(
                 />
                 <p className={`grow text-ellipsis overflow-hidden`}>{target}</p>
               </Badge>
-              <Badge variant={`outline`}>{time.toFixed(2)}s</Badge>
+              <Badge variant={`outline`}>{time.toFixed(2)}″</Badge>
             </CardTitle>
             <CardContent className={`w-full p-0`}>
               {!status ? (
@@ -441,7 +441,7 @@ const ResultComp = React.forwardRef<HTMLDivElement, Props>(
                   {!isCapture && (
                     <RichTextarea
                       className={`mt-2`}
-                      name={`Raw Whois Response`}
+                      name={`原始 Whois 响应`}
                       value={result?.rawWhoisContent}
                       saveFileName={`${target.replace(/\./g, "-")}-whois.txt`}
                     />
