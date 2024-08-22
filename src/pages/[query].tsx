@@ -265,14 +265,14 @@ function ResultTable({ result, target }: ResultTableProps) {
             value={toReadableISODate(result.creationDate)}
             hidden={!result.creationDate || result.creationDate === "Unknown"}
           >
-            <InfoText content={`UTC`} />
+            <InfoText content={`UTC+8`} />
           </Row>
           <Row
             name={`更新时间`}
             value={toReadableISODate(result.updatedDate)}
             hidden={!result.updatedDate || result.updatedDate === "Unknown"}
           >
-            <InfoText content={`UTC`} />
+            <InfoText content={`UTC+8`} />
           </Row>
           <Row
             name={`截止时间`}
@@ -281,7 +281,7 @@ function ResultTable({ result, target }: ResultTableProps) {
               !result.expirationDate || result.expirationDate === "Unknown"
             }
           >
-            <InfoText content={`UTC`} />
+            <InfoText content={`UTC+8`} />
           </Row>
           <Row
             name={`注册组织`}
