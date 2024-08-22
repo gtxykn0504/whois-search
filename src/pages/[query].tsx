@@ -489,10 +489,10 @@ export default function Lookup({ data, target }: Props) {
             <Search
               className={`w-4 h-4 md:w-6 md:h-6 mr-1 md:mr-1.5 shrink-0`}
             />
-            Whois Lookup
+            Whois 查询
           </h1>
           <p className={"text-md text-center text-secondary"}>
-            Please enter a domain name to lookup
+            请输入您需要查询的域名……
           </p>
           <div className={"relative flex flex-row items-center w-full mt-2"}>
             <Input
@@ -533,13 +533,13 @@ export default function Lookup({ data, target }: Props) {
         >
           Powered by{" "}
           <Link
-            href={`https://github.com/zmh-program/next-whois-ui`}
+            href={`https://github.com/BunDragon`}
             target={`_blank`}
             className={`text-primary underline underline-offset-2 mx-1`}
           >
-            Next Whois UI
+            BunDragon
           </Link>
-          <Badge variant={`outline`}>v{VERSION}</Badge>
+          <Badge variant={`outline`} href="https://status.setbun.com/">Uptime</Badge>
         </div>
       </main>
     </ScrollArea>

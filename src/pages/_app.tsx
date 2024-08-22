@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 const siteTitle = strEnv("NEXT_PUBLIC_SITE_TITLE", "Next Whois UI");
 const siteDescription = strEnv(
   "NEXT_PUBLIC_SITE_DESCRIPTION",
-  "Next Whois Lookup Tool, Support Domain/IPv4/IPv6/ASN/CIDR Whois Lookup, Provided Beautiful, Clean and Simple UI.",
+  "Whois查找工具，支持域名/IPv4/IPv6/ASN/CIDR的Whois查找",
 );
 const siteKeywords = strEnv(
   "NEXT_PUBLIC_SITE_KEYWORDS",
@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
           >
             <ModeToggle />
             <Link
-              href={`https://github.com/zmh-program/next-whois-ui`}
+              href={`https://github.com/FrederickBun/bun-whois-search`}
               target={`_blank`}
             >
               <Button variant={`outline`} size={`icon`}>
