@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{siteTitle}</title>
+        <link rel="icon" href="/public/favicon.png"></link>
         <meta name="description" content={siteDescription} />
         <meta name="tags" content={siteKeywords} />
         <meta name="keywords" content={siteKeywords} />
