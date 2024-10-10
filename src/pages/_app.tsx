@@ -19,7 +19,7 @@ const siteDescription = strEnv(
 );
 const siteKeywords = strEnv(
   "NEXT_PUBLIC_SITE_KEYWORDS",
-  "Whois, Lookup, Tool, Next Whois UI",
+  "Whois, Lookup, Tool, Whois Search",
 );
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
           >
             <ModeToggle />
             <Link
-              href={`https://github.com/FrederickBun/bun-whois-search`}
+              href={`https://github.com/gtxykn0504/whois-search`}
               target={`_blank`}
             >
               <Button variant={`outline`} size={`icon`}>
