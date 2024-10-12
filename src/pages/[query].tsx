@@ -533,11 +533,11 @@ export default function Lookup({ data, target }: Props) {
         >
           Powered by{" "}
           <Link
-            href={`https://github.com/BunDragon`}
+            href={`https://zheary.com`}
             target={`_blank`}
             className={`text-primary underline underline-offset-2 mx-1`}
           >
-            BunDragon
+            Zheary
           </Link>
           <Badge variant={`outline`}>All service are online.</Badge>
         </div>
